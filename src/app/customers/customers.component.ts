@@ -1,3 +1,6 @@
+import { CustomersService } from './../shared/services/customers.service';
+import { Customer } from './../shared/models/customer';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  $customers: Observable<Customer[]>;
+
+  constructor(private customersService: CustomersService) { }
 
   ngOnInit(): void {
+    this.loadCustomers();
+  }
+
+  loadCustomers(): void {
+    this.$customers = this.customersService.getAllCustomers();
   }
 
 }
