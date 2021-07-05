@@ -1,0 +1,34 @@
+{
+    "customers": [
+        {
+            "id": 1,
+            "name": "Harry Duke",
+            "email": "harryduke@duke.com"
+        },
+        {
+            "id": 2,
+            "name": "James Rollins",
+            "email": "jamesrollins@gmail.com"
+        },
+        {
+            "id": 3,
+            "name": "Joe Dunkins",
+            "email": "joed52@outlook.com"
+        },
+        {
+            "id": 4,
+            "name": "Heather Strite",
+            "email": "heather@stritesbusiness.com"
+        },
+        {
+            "id": 5,
+            "name": "Jane Drones",
+            "email": "janethedrones@howaboutthis.com"
+        },
+        {
+            "id": 6,
+            "name": "Sally Brown",
+            "email": "sally@thebrowns.com"
+        }
+    ]
+}
