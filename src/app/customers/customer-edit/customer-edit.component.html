@@ -8,5 +8,15 @@
       <label for="email" class="form-label">Email address</label>
       <input type="email" class="form-control" id="email" formControlName="email">
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="this.customerEditForm.invalid">Save</button>
+    <div class="row">
+        <div class="col-md-3 offset-md-3">
+            <button type="submit" class="btn btn-outline-primary" 
+                [disabled]="this.customerEditForm.invalid"
+                (click)="this.saveCustomer()">Save</button>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-outline-primary"
+                (click)="this.deleteCustomer()">Delete</button>
+        </div>
+    </div>
 </form>
