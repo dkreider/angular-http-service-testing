@@ -8,23 +8,23 @@ import { Customer } from '../models/customer';
 })
 export class CustomersService {
 
-  URL: string = `http://localhost:3000/customers`
+  private readonly URL: string = `http://localhost:3000/customers`
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAllCustomers(): Observable<Customer[]> {
-    return this.httpClient.get<Customer[]>(`${URL}`);
+  public getAllCustomers(): Observable<any> {
+    return this.httpClient.get<Customer[]>(this.URL);
   }
 
   public getCustomer(id: string): Observable<Customer> {
-    return this.httpClient.get<Customer>(`${URL}/${id}`);
+    return this.httpClient.get<Customer>(`${this.URL}/${id}`);
   }
 
   public createCustomer(customer: Customer): Observable<Customer> {
-    return this.httpClient.post<Customer>(`${URL}`, customer);
+    return this.httpClient.post<Customer>(`${this.URL}`, customer);
   }
 
   public updateCustomer(customer: Customer): Observable<Customer> {
-    return this.httpClient.put<Customer>(`${URL}`, customer);
+    return this.httpClient.put<Customer>(`${this.URL}`, customer);
   }
 }
