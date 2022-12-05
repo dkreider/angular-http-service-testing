@@ -1,6 +1,6 @@
 import { CustomersService } from './../../shared/services/customers.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Customer } from 'src/app/shared/models/customer';
 
@@ -11,10 +11,10 @@ import { Customer } from 'src/app/shared/models/customer';
 })
 export class CustomerEditComponent implements OnInit {
 
-  customerEditForm = new FormGroup({
-    id: new FormControl(),
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.email)
+  customerEditForm = new UntypedFormGroup({
+    id: new UntypedFormControl(),
+    name: new UntypedFormControl('', Validators.required),
+    email: new UntypedFormControl('', Validators.email)
   });
 
   constructor(
